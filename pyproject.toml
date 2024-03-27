@@ -3,12 +3,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "leakybucket"
-description = "Template project for a hydrological model BMI for eWaterCycle."
+name = "parallelisation_sleep"
+description = "Model with sleeps to test parallelisation for BMI for eWaterCycle."
 license = "Apache-2.0"
 version = "0.0.1"
 authors = [
-  { name = "Bart Schilperoort", email = "b.schilperoort@esciencecenter.nl" },
+  { name = "David Haasnoot", email = "davidhaasnoot@gmail.com" },
 ]
 
 # Include here only the dependencies for the BMI Model

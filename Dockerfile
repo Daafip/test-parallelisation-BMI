@@ -29,9 +29,10 @@
 # This will spawn a new bash terminal running inside the docker container
 
 FROM mambaorg/micromamba:1.3.1
+MAINTAINER David Haasnoot daafips@gmail.com
 
 # Here you can point to the source repository of this Dockerfile:
-LABEL org.opencontainers.image.source="https://github.com/eWaterCycle/leakybucket-bmi"
+LABEL org.opencontainers.image.source="https://github.com/Daafip/test-parallelisation-BMI"
 
 # Install Python + additional conda-dependencies,
 # Here I added cartopy as an example
@@ -42,12 +43,12 @@ RUN micromamba install -y -n base -c conda-forge python=3.10 cartopy && \
 # instructions below
 ARG MAMBA_DOCKERFILE_ACTIVATE=1  # (otherwise python will not be found)
 
-# Install leakybucket.LeakyBucketBmi
-COPY . /opt/leakybucket
-RUN pip install /opt/leakybucket/
+# Install parallelisation_sleep.LeakyBucketBmi
+COPY . /opt/parallelisation_sleep
+RUN pip install /opt/parallelisation_sleep/
 
 RUN pip install grpc4bmi==0.4.0
 
 # Default command should be to run GRPC4BMI server
 # Don't override micromamba's entrypoint as that activates conda!
-CMD run-bmi-server --name "leakybucket.LeakyBucketBmi" --port 55555 --debug
+CMD run-bmi-server --name "parallelisation_sleep.parallelisation_sleep_bmi.ParallelisationSleep" --port 55555 --debug

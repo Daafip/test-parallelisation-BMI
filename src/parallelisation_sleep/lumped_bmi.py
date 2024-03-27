@@ -1,6 +1,6 @@
 from typing import Any, Tuple
 import numpy as np
-from leakybucket import utils
+from parallelisation_sleep import utils
 from bmipy import Bmi
 
 

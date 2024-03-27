@@ -1,6 +1,6 @@
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
-from leakybucket.leakybucket_bmi import LeakyBucketBmi
-from leakybucket.lumped_bmi import LumpedBmi
+from parallelisation_sleep.parallelisation_sleep_bmi import ParallelisationSleep
+from parallelisation_sleep.parallelisation_sleep_bmi import LumpedBmi
 
-__all__ = ["LeakyBucketBmi", "LumpedBmi"]
+__all__ = ["ParallelisationSleep", "LumpedBmi"]
